@@ -66,3 +66,12 @@ export const argentineMenu = {
     },
   ],
 };
+
+export const dataFooter = [
+  { id: 1, label: "Advertising policy" },
+  { id: 2, label: "Terms and Conditions" },
+  { id: 3, label: "Security" },
+  { id: 4, label: "Home" },
+  { id: 5, label: "Companies" },
+  { id: 6, label: "Carts" },
+];

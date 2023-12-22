@@ -19,7 +19,7 @@ const Sidebar: React.FC<SidebarProps> = ({ navList }) => {
   const SIDEBAR_MIN_HEIGHT = 829;
 
   /* Sidebar Nav */
-  const Nav: React.FC<{ list: NavListItem[] | undefined }> = ({ list }) => {
+  function Nav(list: NavListItem[] | undefined): JSX.Element {
     return (
       <List
         component="nav"
@@ -44,7 +44,7 @@ const Sidebar: React.FC<SidebarProps> = ({ navList }) => {
         })}
       </List>
     );
-  };
+  }
 
   return (
     <Box
@@ -68,7 +68,7 @@ const Sidebar: React.FC<SidebarProps> = ({ navList }) => {
 
       <ProfileCard user={user} />
 
-      <Nav list={navList} />
+      {Nav(navList)}
 
       {/* padding: 0 is to reset the default padding */}
       <Box sx={{ marginTop: "auto" }}>

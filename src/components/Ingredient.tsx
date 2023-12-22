@@ -26,6 +26,8 @@ const Ingredient: React.FC<IngredientProps> = ({ ingredient }) => {
             cursor: "pointer",
           }}
           className="checkbox-ingredients"
+          name={ingredient.name}
+          id={ingredient.name}
         />
       </Box>
       <Typography fontSize="12px">{ingredient.name}</Typography>

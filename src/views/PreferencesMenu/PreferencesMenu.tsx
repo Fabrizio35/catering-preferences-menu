@@ -2,6 +2,7 @@ import { Box } from "@mui/material";
 import Menu from "../../components/Menu";
 import { argentineMenu } from "../../data/data";
 import Allergies from "../../components/Allergies";
+import AddCart from "../../components/AddCart";
 
 const PreferencesMenu: React.FC = () => {
   return (
@@ -18,6 +19,8 @@ const PreferencesMenu: React.FC = () => {
       <Menu menu={argentineMenu} />
 
       <Allergies />
+
+      <AddCart />
     </Box>
   );
 };
