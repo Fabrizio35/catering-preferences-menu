@@ -9,12 +9,13 @@ import {
 } from "@mui/material";
 import { Logout } from "@mui/icons-material";
 import { SidebarProps, NavListItem } from "../types/Sidebar.types";
-import colors from "../colors";
+import colors from "../colors/colors";
 import ProfileCard from "./ProfileCard";
 import Logo from "./Logo";
 import { user } from "../data/data";
 
 const Sidebar: React.FC<SidebarProps> = ({ navList }) => {
+  /* Sidebar Measurements */
   const SIDEBAR_WIDTH = 287;
   const SIDEBAR_MIN_HEIGHT = 829;
 
@@ -29,13 +30,12 @@ const Sidebar: React.FC<SidebarProps> = ({ navList }) => {
           const Icon = elem.icon;
           return (
             <ListItem key={elem.label} sx={{ padding: 0 }}>
+              {/* They should be changed to Link tags */}
               <ListItemButton sx={{ padding: 0 }}>
-                <ListItemIcon sx={{ color: colors.textAndIcons }}>
+                <ListItemIcon sx={{ color: colors.white }}>
                   <Icon />
                 </ListItemIcon>
-                <Typography
-                  sx={{ color: colors.textAndIcons, fontSize: "20px" }}
-                >
+                <Typography sx={{ color: colors.white, fontSize: "20px" }}>
                   {elem.label}
                 </Typography>
               </ListItemButton>
@@ -48,14 +48,15 @@ const Sidebar: React.FC<SidebarProps> = ({ navList }) => {
 
   return (
     <Box
+      component="aside"
       sx={{
         width: `${SIDEBAR_WIDTH}px`,
         minHeight: `${SIDEBAR_MIN_HEIGHT}px`,
-        backgroundColor: colors.background,
+        backgroundColor: colors.primary,
         borderTopRightRadius: "20px",
         borderBottomRightRadius: "20px",
         padding: "32px",
-        boxShadow: `10px 0 10px ${colors.shadow}`,
+        boxShadow: `10px 0 10px ${colors.shadowSidebar}`,
         display: "flex",
         flexDirection: "column",
         gap: "64px",
@@ -74,13 +75,14 @@ const Sidebar: React.FC<SidebarProps> = ({ navList }) => {
       <Box sx={{ marginTop: "auto" }}>
         <List>
           <ListItem sx={{ padding: 0 }}>
+            {/* They should be changed to Link tags */}
             <ListItemButton sx={{ padding: 0 }}>
-              <ListItemIcon sx={{ color: colors.textAndIcons }}>
+              <ListItemIcon sx={{ color: colors.white }}>
                 <Logout />
               </ListItemIcon>
               <Typography
                 component="span"
-                sx={{ color: colors.textAndIcons, fontSize: "20px" }}
+                sx={{ color: colors.white, fontSize: "20px" }}
               >
                 Log Out
               </Typography>

@@ -1,3 +1,16 @@
+/* TitleView Props */
+export interface TitleViewProps {
+  title: string;
+}
+
+/* AddCart Props */
+
+export interface AddCartProps {
+  price?: string;
+}
+
+/* Ingredient, Dish and Menu types */
+
 type Ingredient = {
   id: number;
   name: string;

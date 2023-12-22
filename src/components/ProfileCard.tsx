@@ -1,9 +1,11 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import colors from "../colors";
+import colors from "../colors/colors";
 import { ProfileCardProps } from "../types/Sidebar.types";
 
+/* Sidebar Profile Card */
 const ProfileCard: React.FC<ProfileCardProps> = ({ user }) => {
+  /* Photo size */
   const PHOTO_SIZE = 71;
 
   return (
@@ -16,7 +18,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ user }) => {
           width: `${PHOTO_SIZE}px`,
           height: `${PHOTO_SIZE}px`,
           borderRadius: "100%",
-          backgroundColor: colors.textAndIcons,
+          backgroundColor: colors.white,
           objectFit: "cover",
         }}
       />
@@ -29,7 +31,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ user }) => {
       >
         <Typography
           component="span"
-          sx={{ fontSize: "16px", color: colors.textAndIcons }}
+          sx={{ fontSize: "16px", color: colors.white }}
         >
           {user.username}
         </Typography>
@@ -37,8 +39,9 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ user }) => {
           component="span"
           sx={{
             fontSize: "12px",
-            color: colors.textAndIcons,
+            color: colors.white,
             opacity: "50%",
+            cursor: "pointer",
           }}
         >
           Edit profile

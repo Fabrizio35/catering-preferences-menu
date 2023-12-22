@@ -1,7 +1,8 @@
 import { Box, Typography } from "@mui/material";
-import colors from "../colors";
+import colors from "../colors/colors";
 import { IngredientProps } from "../types/PreferencesMenu.types";
 
+/* Ingredient Checkbox */
 const Ingredient: React.FC<IngredientProps> = ({ ingredient }) => {
   return (
     <Box sx={{ display: "flex", alignItems: "center", gap: "16px" }}>
@@ -9,7 +10,7 @@ const Ingredient: React.FC<IngredientProps> = ({ ingredient }) => {
         sx={{
           width: "21px",
           height: "21px",
-          border: `2px solid ${colors.background}`,
+          border: `2px solid ${colors.primary}`,
           borderRadius: "100%",
           display: "flex",
           justifyContent: "center",

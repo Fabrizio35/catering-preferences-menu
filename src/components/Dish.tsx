@@ -5,18 +5,21 @@ import {
   Box,
   Typography,
 } from "@mui/material";
-import colors from "../colors";
+import colors from "../colors/colors";
 import { ExpandMore } from "@mui/icons-material";
 import { DishProps } from "../types/PreferencesMenu.types";
 import Ingredient from "./Ingredient";
 
+/* Dish Detail (Accordion) */
 const Dish: React.FC<DishProps> = ({ dish }) => {
+  const PHOTO_SIZE = 375;
+
   return (
     <Accordion
       sx={{
-        boxShadow: `5px 4px 10px #88064D40`,
+        boxShadow: `5px 4px 10px ${colors.shadowAccordion}`,
         borderRadius: "20px",
-        backgroundColor: "#FFFCF8",
+        backgroundColor: colors.accordion,
         "&.MuiAccordion-root:before": {
           display: "none",
         },
@@ -26,7 +29,7 @@ const Dish: React.FC<DishProps> = ({ dish }) => {
         expandIcon={
           <ExpandMore
             sx={{
-              color: colors.background,
+              color: colors.primary,
               width: "38px",
               height: "38px",
             }}
@@ -68,10 +71,10 @@ const Dish: React.FC<DishProps> = ({ dish }) => {
           alt={`${dish.name} image`}
           title={`${dish.name} image`}
           style={{
-            width: "375px",
-            height: "375px",
+            width: `${PHOTO_SIZE}px`,
+            height: `${PHOTO_SIZE}px`,
             borderRadius: "20px",
-            boxShadow: `10px 0 10px #88064D4D`,
+            boxShadow: `10px 0 10px ${colors.shadowImage}`,
             marginRight: "32px",
           }}
         />

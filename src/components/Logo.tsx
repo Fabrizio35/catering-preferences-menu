@@ -1,5 +1,5 @@
 import { Typography } from "@mui/material";
-import colors from "../colors";
+import colors from "../colors/colors";
 
 /* The Logo right now is a JSX, but it can be an image, svg, etc. */
 
@@ -10,7 +10,7 @@ export default function Logo(): JSX.Element {
       component="h1"
       fontSize="30px"
       fontWeight="700"
-      color={colors.textAndIcons}
+      color={colors.white}
       sx={{ userSelect: "none" }}
     >
       Logo

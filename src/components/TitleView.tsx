@@ -1,20 +1,18 @@
 import { Box, Typography } from "@mui/material";
 import { ArrowBackIos } from "@mui/icons-material";
-import colors from "../colors";
-
-interface TitleViewProps {
-  title: string;
-}
+import colors from "../colors/colors";
+import { TitleViewProps } from "../types/PreferencesMenu.types";
 
 /* Title Menu */
 const TitleView: React.FC<TitleViewProps> = ({ title }) => {
   return (
+    /* They should be changed to Link tags */
     <Box
       sx={{
         display: "flex",
         alignItems: "center",
         gap: "24px",
-        color: colors.background,
+        color: colors.primary,
         position: "absolute",
         top: "32px",
         left: "316px",

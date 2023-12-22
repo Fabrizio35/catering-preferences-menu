@@ -1,7 +1,10 @@
 import { Box, Typography, Button } from "@mui/material";
 import { ShoppingCart } from "@mui/icons-material";
+import colors from "../colors/colors";
+import { AddCartProps } from "../types/PreferencesMenu.types";
 
-const AddCart: React.FC = () => {
+/* Add to cart Button and Price */
+const AddCart: React.FC<AddCartProps> = ({ price }) => {
   return (
     <Box
       sx={{
@@ -15,27 +18,27 @@ const AddCart: React.FC = () => {
       <Typography
         component="span"
         fontSize="31.25px"
-        color="#F86260"
+        color={colors.primary}
         fontWeight="700"
       >
-        $00
+        {price ? `$${price}` : "$00"}
       </Typography>
       <Button
         sx={{
-          backgroundColor: "#F86260",
+          backgroundColor: colors.primary,
           width: "297px",
           height: "36px",
-          color: "#FFFFFF",
+          color: colors.white,
           borderRadius: "5px",
           "&:hover": {
-            backgroundColor: "#F86260",
+            backgroundColor: colors.primary,
           },
         }}
         endIcon={
           <ShoppingCart
             sx={{
-              backgroundColor: "#FFFFFF",
-              color: "#F39060",
+              backgroundColor: colors.white,
+              color: colors.addCart,
               borderRadius: "3px",
               padding: "2px",
             }}

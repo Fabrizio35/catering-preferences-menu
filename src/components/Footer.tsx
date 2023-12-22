@@ -1,13 +1,23 @@
 import { Box, Typography } from "@mui/material";
 import Logo from "./Logo";
 import { dataFooter } from "../data/data";
+import colors from "../colors/colors";
 
 export default function Footer() {
+  /* List of Footer elements */
   const DataList = (firstIndex: number, lastIndex: number) => {
     return (
-      <Box sx={{ display: "flex", flexDirection: "column" }}>
+      <Box sx={{ display: "flex", flexDirection: "column", gap: "8px" }}>
         {dataFooter.slice(firstIndex, lastIndex).map((data) => (
-          <Typography fontSize="16px">{data.label}</Typography>
+          /* They should be changed to Link tags */
+          <Typography
+            key={data.id}
+            component="span"
+            fontSize="16px"
+            sx={{ cursor: "pointer" }}
+          >
+            {data.label}
+          </Typography>
         ))}
       </Box>
     );
@@ -17,7 +27,7 @@ export default function Footer() {
     <Box
       component="footer"
       sx={{
-        backgroundColor: "#F86260",
+        backgroundColor: colors.primary,
         width: "100%",
         marginTop: "32px",
         display: "flex",
@@ -30,7 +40,7 @@ export default function Footer() {
     >
       <Box
         sx={{
-          color: "#FFFFFF",
+          color: colors.white,
           display: "flex",
           justifyContent: "space-between",
           width: "95%",
@@ -47,11 +57,13 @@ export default function Footer() {
           }}
         >
           <Logo />
-          <Typography>correo@correo.com</Typography>
+          <Typography component="span" fontSize="16px">
+            correo@correo.com
+          </Typography>
         </Box>
         {DataList(3, 6)}
       </Box>
-      <Typography fontSize="16px" color="#FFFFFF">
+      <Typography component="h6" fontSize="16px" color={colors.white}>
         2023 LOGO All right reserved
       </Typography>
     </Box>

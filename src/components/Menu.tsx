@@ -2,6 +2,7 @@ import { Box, Typography } from "@mui/material";
 import Dish from "./Dish";
 import { MenuProps } from "../types/PreferencesMenu.types";
 
+/* Menu name, description and dishes */
 const Menu: React.FC<MenuProps> = ({ menu }) => {
   return (
     <Box sx={{ display: "flex", flexDirection: "column", gap: "48px" }}>

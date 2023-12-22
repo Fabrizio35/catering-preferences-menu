@@ -4,6 +4,7 @@ import { argentineMenu } from "../../data/data";
 import Allergies from "../../components/Allergies";
 import AddCart from "../../components/AddCart";
 
+/* Preferences Menu Section */
 const PreferencesMenu: React.FC = () => {
   return (
     <Box
