@@ -9,22 +9,22 @@ import {
 } from "@mui/material";
 import { Logout } from "@mui/icons-material";
 import { SidebarProps, NavListItem } from "../../types/Sidebar.types";
-import colors from "./colors";
+import colors from "../../colors";
 import ProfileCard from "./ProfileCard";
 import Logo from "../Logo";
 
 const Sidebar: React.FC<SidebarProps> = ({ navList }) => {
-  const SIDEBAR_MAX_WIDTH = 287;
+  const SIDEBAR_WIDTH = 287;
   const SIDEBAR_MIN_HEIGHT = 829;
 
   /* Sidebar Nav */
-  const Nav: React.FC<{ list: NavListItem[] }> = ({ list }) => {
+  const Nav: React.FC<{ list: NavListItem[] | undefined }> = ({ list }) => {
     return (
       <List
         component="nav"
         sx={{ display: "flex", flexDirection: "column", gap: "24px" }}
       >
-        {list.map((elem) => {
+        {list?.map((elem) => {
           const Icon = elem.icon;
           return (
             <ListItem key={elem.label} sx={{ padding: 0 }}>
@@ -55,7 +55,7 @@ const Sidebar: React.FC<SidebarProps> = ({ navList }) => {
   return (
     <Box
       sx={{
-        maxWidth: `${SIDEBAR_MAX_WIDTH}px`,
+        width: `${SIDEBAR_WIDTH}px`,
         minHeight: `${SIDEBAR_MIN_HEIGHT}px`,
         backgroundColor: colors.background,
         borderTopRightRadius: "20px",
@@ -65,6 +65,9 @@ const Sidebar: React.FC<SidebarProps> = ({ navList }) => {
         display: "flex",
         flexDirection: "column",
         gap: "64px",
+        position: "absolute",
+        top: 0,
+        left: 0,
       }}
     >
       <Logo />

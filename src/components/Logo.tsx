@@ -1,5 +1,5 @@
 import { Typography } from "@mui/material";
-import colors from "./Sidebar/colors";
+import colors from "../colors";
 
 /* The Logo right now is a JSX, but it can be an image, svg, etc. */
 

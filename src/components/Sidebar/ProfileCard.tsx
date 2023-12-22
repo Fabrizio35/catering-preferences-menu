@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import colors from "./colors";
+import colors from "../../colors";
 import { ProfileCardProps } from "../../types/Sidebar.types";
 
 const ProfileCard: React.FC<ProfileCardProps> = ({ user }) => {

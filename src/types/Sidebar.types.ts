@@ -6,7 +6,7 @@ export type NavListItem = {
 };
 
 export interface SidebarProps {
-  navList: NavListItem[];
+  navList?: NavListItem[];
 }
 
 /* Sidebar Profile Card Types */
