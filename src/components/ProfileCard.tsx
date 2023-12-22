@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import colors from "../../colors";
-import { ProfileCardProps } from "../../types/Sidebar.types";
+import colors from "../colors";
+import { ProfileCardProps } from "../types/Sidebar.types";
 
 const ProfileCard: React.FC<ProfileCardProps> = ({ user }) => {
   const PHOTO_SIZE = 71;

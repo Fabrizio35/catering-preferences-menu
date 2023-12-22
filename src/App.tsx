@@ -1,41 +1,15 @@
 import "./App.css";
-import Sidebar from "./components/Sidebar/Sidebar";
-import { Home, ShoppingCart } from "@mui/icons-material";
+import Sidebar from "./components/Sidebar";
 import PreferencesMenu from "./views/PreferencesMenu/PreferencesMenu";
-import { Box, Typography } from "@mui/material";
-import { ArrowBackIos } from "@mui/icons-material";
-import colors from "./colors";
+import TitleView from "./components/TitleView";
+import { navList } from "./data/data";
 
-/* Sidebar Navbar Component List */
-const navList = [
-  { label: "Home", icon: Home },
-  { label: "Cart", icon: ShoppingCart },
-];
-
+/* Preferences Menu View */
 function App() {
   return (
     <>
       <Sidebar navList={navList} />
-      <Box
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          gap: "24px",
-          color: colors.background,
-          position: "absolute",
-          top: "32px",
-          left: "316px",
-          cursor: "pointer",
-        }}
-      >
-        <ArrowBackIos />
-        <Typography
-          component="h2"
-          sx={{ fontSize: "31.25px", fontWeight: "700" }}
-        >
-          Preferences
-        </Typography>
-      </Box>
+      <TitleView title={"Preferences"} />
       <PreferencesMenu />
     </>
   );

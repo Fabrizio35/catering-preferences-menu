@@ -1,7 +1,9 @@
-import { Box, Typography } from "@mui/material";
-import DishName from "./DishName";
+import { Box } from "@mui/material";
+import Menu from "../../components/Menu";
+import { argentineMenu } from "../../data/data";
+import Allergies from "../../components/Allergies";
 
-export default function PreferencesMenu() {
+const PreferencesMenu: React.FC = () => {
   return (
     <Box
       sx={{
@@ -10,22 +12,14 @@ export default function PreferencesMenu() {
         width: "930px",
         display: "flex",
         flexDirection: "column",
+        gap: "48px",
       }}
     >
-      <Box sx={{ display: "flex", flexDirection: "column", gap: "48px" }}>
-        <Box sx={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-          <Typography component="h3" fontSize="31.25px" fontWeight="700">
-            Menu Name
-          </Typography>
-          <Typography component="p" fontSize="16px">
-            Description
-          </Typography>
-        </Box>
+      <Menu menu={argentineMenu} />
 
-        <DishName />
-        <DishName />
-        <DishName />
-      </Box>
+      <Allergies />
     </Box>
   );
-}
+};
+
+export default PreferencesMenu;

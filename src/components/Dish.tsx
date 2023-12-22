@@ -5,10 +5,12 @@ import {
   Box,
   Typography,
 } from "@mui/material";
-import colors from "../../colors";
+import colors from "../colors";
 import { ExpandMore } from "@mui/icons-material";
+import { DishProps } from "../types/PreferencesMenu.types";
+import Ingredient from "./Ingredient";
 
-const DishName: React.FC = () => {
+const Dish: React.FC<DishProps> = ({ dish }) => {
   return (
     <Accordion
       sx={{
@@ -33,10 +35,10 @@ const DishName: React.FC = () => {
       >
         <Box sx={{ display: "flex", flexDirection: "column", gap: "16px" }}>
           <Typography component="h4" fontSize="20px" fontWeight="700">
-            Name of the dish
+            {dish.name}
           </Typography>
           <Typography component="p" fontSize="12px">
-            Description
+            {dish.description}
           </Typography>
         </Box>
       </AccordionSummary>
@@ -56,36 +58,15 @@ const DishName: React.FC = () => {
             component="ul"
             sx={{ display: "flex", flexDirection: "column", gap: "9px" }}
           >
-            <Box sx={{ display: "flex", alignItems: "center", gap: "16px" }}>
-              <Box
-                sx={{
-                  width: "21px",
-                  height: "21px",
-                  border: `2px solid ${colors.background}`,
-                  borderRadius: "100%",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <input
-                  type="checkbox"
-                  style={{
-                    width: "15px",
-                    height: "15px",
-                    appearance: "none",
-                    borderRadius: "100%",
-                  }}
-                  className="checkbox-ingredients"
-                />
-              </Box>
-              <Typography fontSize="12px">Ingredient</Typography>
-            </Box>
+            {dish.ingredients.map((ingredient) => (
+              <Ingredient key={ingredient.id} ingredient={ingredient} />
+            ))}
           </Box>
         </Box>
         <img
-          src="https://fastly.picsum.photos/id/220/400/400.jpg?hmac=TZxXlzOtXbltfQjPEQ7DnsOcm4b0BNwUvXdtmJeIwGw"
-          alt=""
+          src={dish.image}
+          alt={`${dish.name} image`}
+          title={`${dish.name} image`}
           style={{
             width: "375px",
             height: "375px",
@@ -99,4 +80,4 @@ const DishName: React.FC = () => {
   );
 };
 
-export default DishName;
+export default Dish;

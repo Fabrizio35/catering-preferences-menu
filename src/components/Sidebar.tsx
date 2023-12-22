@@ -8,10 +8,11 @@ import {
   ListItemButton,
 } from "@mui/material";
 import { Logout } from "@mui/icons-material";
-import { SidebarProps, NavListItem } from "../../types/Sidebar.types";
-import colors from "../../colors";
+import { SidebarProps, NavListItem } from "../types/Sidebar.types";
+import colors from "../colors";
 import ProfileCard from "./ProfileCard";
-import Logo from "../Logo";
+import Logo from "./Logo";
+import { user } from "../data/data";
 
 const Sidebar: React.FC<SidebarProps> = ({ navList }) => {
   const SIDEBAR_WIDTH = 287;
@@ -43,13 +44,6 @@ const Sidebar: React.FC<SidebarProps> = ({ navList }) => {
         })}
       </List>
     );
-  };
-
-  /* User Test */
-  const user = {
-    username: "Username",
-    photo:
-      "https://fastly.picsum.photos/id/8/100/100.jpg?hmac=57Kp0Mcu8uqmiBdlwOKBQESnKuBxVXpha1ZVTmaE9X0",
   };
 
   return (
