@@ -1,7 +1,7 @@
 import "./App.css";
 import Sidebar from "./components/Sidebar/Sidebar";
 import { Home, ShoppingCart } from "@mui/icons-material";
-import PreferencesMenu from "./views/PreferencesMenu";
+import PreferencesMenu from "./views/PreferencesMenu/PreferencesMenu";
 import { Box, Typography } from "@mui/material";
 import { ArrowBackIos } from "@mui/icons-material";
 import colors from "./colors";
