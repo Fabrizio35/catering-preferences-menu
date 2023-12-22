@@ -1,8 +1,9 @@
 import "./App.css";
-import Sidebar from "./components/Sidebar";
+import Sidebar from "./components/Sidebar/Sidebar";
 import { Home, ShoppingCart } from "@mui/icons-material";
 
-const listNav = [
+/* Sidebar Navbar Component List */
+const navList = [
   { label: "Home", icon: Home },
   { label: "Cart", icon: ShoppingCart },
 ];
@@ -10,7 +11,7 @@ const listNav = [
 function App() {
   return (
     <>
-      <Sidebar listNav={listNav} />
+      <Sidebar navList={navList} />
     </>
   );
 }
