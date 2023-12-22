@@ -29,8 +29,8 @@ const Sidebar: React.FC<SidebarProps> = ({ navList }) => {
         {list?.map((elem) => {
           const Icon = elem.icon;
           return (
+            /* Link tag must be added */
             <ListItem key={elem.label} sx={{ padding: 0 }}>
-              {/* They should be changed to Link tags */}
               <ListItemButton sx={{ padding: 0 }}>
                 <ListItemIcon sx={{ color: colors.white }}>
                   <Icon />
@@ -75,7 +75,7 @@ const Sidebar: React.FC<SidebarProps> = ({ navList }) => {
       <Box sx={{ marginTop: "auto" }}>
         <List>
           <ListItem sx={{ padding: 0 }}>
-            {/* They should be changed to Link tags */}
+            {/* Link tag must be added */}
             <ListItemButton sx={{ padding: 0 }}>
               <ListItemIcon sx={{ color: colors.white }}>
                 <Logout />

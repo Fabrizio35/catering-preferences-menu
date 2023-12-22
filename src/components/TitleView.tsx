@@ -6,7 +6,7 @@ import { TitleViewProps } from "../types/PreferencesMenu.types";
 /* Title Menu */
 const TitleView: React.FC<TitleViewProps> = ({ title }) => {
   return (
-    /* They should be changed to Link tags */
+    /* Link tag must be added */
     <Box
       sx={{
         display: "flex",

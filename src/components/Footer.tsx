@@ -9,7 +9,7 @@ export default function Footer() {
     return (
       <Box sx={{ display: "flex", flexDirection: "column", gap: "8px" }}>
         {dataFooter.slice(firstIndex, lastIndex).map((data) => (
-          /* They should be changed to Link tags */
+          /* Link tag must be added */
           <Typography
             key={data.id}
             component="span"

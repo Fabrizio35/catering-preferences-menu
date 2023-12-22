@@ -35,6 +35,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ user }) => {
         >
           {user.username}
         </Typography>
+        {/* Link tag must be added */}
         <Typography
           component="span"
           sx={{
